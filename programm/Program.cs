@@ -4,7 +4,7 @@
     {
         public static void Main()
         {
-            GetResultArray(GetArray());
+            string?[] resultArray = GetResultArray(GetArray());
         }
 
         // Метод заполнения пользователем массива
@@ -47,7 +47,7 @@
         }
 
         // Метод решения задачи
-        private static void GetResultArray(string?[] array)
+        private static string?[] GetResultArray(string?[] array)
         {
             int count = 0;
             string?[] resultArray = new string[count];
@@ -77,8 +77,9 @@
             }
             else
             {
-                Console.WriteLine("В введенном массиве нет элементов удовлетворяющих условию задачи");
+                Console.WriteLine("В введенном массиве нет элементов удовлетворяющих условию задачи []");
             }
+            return resultArray;
         }
     }
 }
